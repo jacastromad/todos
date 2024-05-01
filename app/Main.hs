@@ -11,7 +11,7 @@ import Data.Version (showVersion)
 import Text.Read (readMaybe)
 import Source (projectFiles, todosInFile, todosInProject)
 
-
+-- TODO: add option to ignore files or directories
 -- Command-line arguments
 data Args = Args
     { number   :: Int
@@ -89,4 +89,5 @@ main = do
 
     todos <- todosInProject (priority opt) (dir opt)
     mapM_ (\todo -> print todo >> putStrLn "") $ takeN (number opt) todos
+    putStrLn $ show (length todos) ++ " TODO comments found."
 
