@@ -2,6 +2,8 @@
 
 ## Build
 
+Packages pcre and pcre-devel are required. Make sure to install them.
+
 ```console
 $ cabal build
 ```
