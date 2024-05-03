@@ -58,7 +58,7 @@ library
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.16.4.0,
+    build-depends:    base >= 4.16 && < 4.18,
                       directory ^>=1.3.6.2,
                       filepath ^>=1.4.2.2,
                       text ^>=1.2.5.0,
@@ -84,7 +84,7 @@ executable todos
 
     -- Other library packages from which modules are imported.
     build-depends:
-        base ^>=4.16.4.0,
+        base >= 4.16 && < 4.18,
         text ^>=1.2.5.0,
         directory ^>=1.3.6.2,
         todos
@@ -112,6 +112,6 @@ test-suite todos-test
     other-modules:    TestTodos, TestSource
 
     -- Test dependencies.
-    build-depends:    base ^>=4.16.4.0,
+    build-depends:    base >= 4.16 && < 4.18,
                       HUnit ^>=1.6.2.0,
                       todos
